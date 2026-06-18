@@ -487,7 +487,7 @@ def ODE_sim(q,RHS,t,IC,description=None):
 
 #     return S_out,I_out,R_out,t_out,A_list,total_num
 
-def SIR_ABM_radius(s0, i0, r0, ri, rr, rm, radius, T_end=5.0,):
+def SIR_ABM_radius(s0, i0, r0, ri, rr, rm, radius, num_t=40, T_end=5.0,):
 
     #number of lattice sites
     n = 40
@@ -644,7 +644,7 @@ def SIR_ABM_radius(s0, i0, r0, ri, rr, rm, radius, T_end=5.0,):
         R_list.append(R)
 
         #sometimes save ABM snapshot
-        if t_list[-2] < image_count*T_final/40 and t_list[-1] >= image_count*T_final/40:
+        if t_list[-2] < image_count*T_final/num_t and t_list[-1] >= image_count*T_final/num_t:
             A_list.append(np.copy(A))
             image_count+=1
 
