@@ -533,7 +533,7 @@ def SIR_ABM_radius(s0, i0, r0, ri, rr, rm, radius, T_end=5.0,):
     S_list = [S]
     I_list = [I]
     R_list = [R]
-    A_list = [A]
+    A_list = [np.copy(A)]
     #number of snapshots saved
     image_count = 1
 
