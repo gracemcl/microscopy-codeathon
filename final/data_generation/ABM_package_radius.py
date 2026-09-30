@@ -1,3 +1,6 @@
+# adapted from: https://github.com/johnnardini/Learning-DE-models-from-stochastic-ABMs
+# we modified the SIR model to allow transmission across a neighborhood of variable radius
+
 import math
 import random
 import numpy as np
